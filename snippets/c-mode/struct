@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: struct
+# key: stru
+# --
+
+#+BEGIN_SRC
+typedef struct
+{
+    $0
+} ${1:name};
+#+END_SRC

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ifndef
+# key: #ifn
+# --
+
+#ifndef FILE_H
+#define FILE_H
+$0
+#endif

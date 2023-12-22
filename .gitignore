@@ -1,0 +1,15 @@
+auto-save-list/
+backups/
+custom-vars.el
+eln-cache/
+elpa/
+history
+ido.last
+places
+recentf
+server/
+tramp
+transient/
+url/
+projectile-bookmarks.eld
+projectile.cache
