@@ -105,8 +105,8 @@
 (require 'zolder-keybindings)
 (require 'zolder-completion)
 (require 'zolder-project)
-(require 'zolder-version-control)
-(require 'zolder-org)
+;; (require 'zolder-version-control)
+;; (require 'zolder-org)
 (require 'zolder-themes)
 
 ;; Language support
