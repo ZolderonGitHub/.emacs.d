@@ -12,6 +12,8 @@
 		       gcs-done)))
 (setq initial-scratch-message ";; Welcome aboard Sailor!\n;; Don't forget to be free!\n")
 
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+
 ;; Backups
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups/")))
 (setq make-backup-files nil)
@@ -58,12 +60,15 @@
 
 ;; Tabs being tabs
 (setq c-basic-offset 4
-      c-default-style "linux")
+      c-default-style "bsd")
 (setq sentence-end-double-space nil)
 (setq-default indent-tabs-mode nil
               tab-width 4
               inhibit-splash-screen t
               compilation-scroll-output t)
+
+;; lines
+(setq next-line-add-newlines nil)
 
 (setq
  mouse-wheel-follow-mouse 't
@@ -100,13 +105,13 @@
 (add-to-list 'load-path "~/.emacs.d/config/")
 
 (require 'zolder-package-manager)
-(require 'zolder-modeline)
 (require 'zolder-evil)
 (require 'zolder-keybindings)
 (require 'zolder-completion)
 (require 'zolder-project)
 (require 'zolder-version-control)
-;; (require 'zolder-org)
+(require 'zolder-org)
+(require 'zolder-modeline)
 (require 'zolder-themes)
 
 ;; Language support
