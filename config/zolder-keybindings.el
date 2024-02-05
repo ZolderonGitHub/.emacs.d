@@ -54,6 +54,7 @@
     "g" '(:ignore t :wk "Git")
     "g g" '(magit :wk "Launch Magit")
     "g c" '(magit-commit :wk "Magit Commit")
+    "g w" '(with-editor-finish :wk "Save Commit")
 
     ;; Elisp related
     "x" '(:ignore t :wk "Evaluate")
