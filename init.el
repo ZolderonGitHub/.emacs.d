@@ -117,7 +117,7 @@
 ;; Language support
 (require 'odin-mode)
 
-(load-theme 'hell)
+(load-theme 'doom-gruvbox)
 
 ;; Frames
 (modify-all-frames-parameters

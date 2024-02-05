@@ -50,6 +50,11 @@
     "k" '(evil-window-up :wk "Window up")
     "l" '(evil-window-right :wk "Window right")
 
+    ;; Git related
+    "g" '(:ignore t :wk "Git")
+    "g g" '(magit :wk "Launch Magit")
+    "g c" '(magit-commit :wk "Magit Commit")
+
     ;; Elisp related
     "x" '(:ignore t :wk "Evaluate")
     "x b" '(eval-buffer :wk "Evaluate buffer")
