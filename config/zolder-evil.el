@@ -12,6 +12,7 @@
   (evil-split-window-below t)
   (evil-move-beyond-eol nil)
   (evil-mode-transient-mouse-selection t)
+  (evil-respect-visual-line-mode t)
   )
 
 (use-package evil-collection

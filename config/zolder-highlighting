@@ -1,0 +1,4 @@
+;; Syntax highlighting
+;; (require 'treesit)
+
+(provide 'zolder-highlighting)

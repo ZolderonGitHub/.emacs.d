@@ -1,8 +1,8 @@
 ;; Memory
-(defvar last-file-name-handler-alist file-name-handler-alist)
-(setq gc-cons-threshold 402653184
-      gc-cons-percentage 0.6
-      file-name-handler-alist nil)
+;; (defvar last-file-name-handler-alist file-name-handler-alist)
+;; (setq gc-cons-threshold 402653184
+;;       gc-cons-percentage 0.6
+;;       file-name-handler-alist nil)
 
 ;; Startup
 (add-hook 'emacs-startup-hook
@@ -33,6 +33,7 @@
 (delete-selection-mode 1)
 (save-place-mode 1)
 (electric-pair-mode 1)
+(setq-default electric-indent-inhibit)
 (electric-indent-mode 1)
 (show-paren-mode 1)
 (setq ring-bell-function 'ignore)
@@ -87,16 +88,18 @@
 ;; Dired
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 
-;; Appearance
-(set-face-attribute 'default  nil :font "Iosevka 12")
-
 ;; Daemon
 (setq default-frame-alist '(
                             (font . "Iosevka 12")
                             (vertical-scroll-bars)
-                            (width . 95)
-                            (height . 52)
+                            (width . 100)
+                            (height . 50)
                             ))
+
+;; Appearance
+(set-face-attribute 'default  nil :font "Iosevka 12")
+(set-face-attribute 'fixed-pitch  nil :font "Iosevka 12")
+(set-face-attribute 'variable-pitch  nil :font "Iosevka 12")
 
 ;; Package directory
 (add-to-list 'load-path "~/.emacs.d/packages/")
@@ -117,7 +120,7 @@
 ;; Language support
 (require 'odin-mode)
 
-(load-theme 'doom-gruvbox)
+(load-theme 'doom-nord)
 
 ;; Frames
 (modify-all-frames-parameters
@@ -131,6 +134,6 @@
 (set-face-background 'fringe (face-attribute 'default :background))
 
 ;; Memory
-(setq gc-cons-threshold 16777216
-      gc-cons-percentage 0.1
-      file-name-handler-alist last-file-name-handler-alist)
+;; (setq gc-cons-threshold 16777216
+;;       gc-cons-percentage 0.1
+;;       file-name-handler-alist last-file-name-handler-alist)

@@ -1,8 +1,11 @@
 ;; Org mode
 (use-package org
   :defer t
+  :config
+  (add-hook 'org-mode-hook 'variable-pitch-mode)
+  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.0))
   :custom
-  (org-ellipsis " ↴")
+  (org-ellipsis "...")
   (org-hide-emphasis-markers t)
   (org-startup-indented t))
 
@@ -31,10 +34,38 @@
     )
   )
 
+(use-package auctex
+  :after org
+  :hook
+  (LaTeX-mode . turn-on-prettify-symbols-mode)
+  :config
+  )
+
+(use-package org-fragtog
+  :after org
+  :config
+  (add-hook 'org-mode-hook 'org-fragtog-mode)
+  )
+
 ;; Icons
 (use-package all-the-icons
   :if (display-graphic-p))
 (use-package all-the-icons-dired
   :hook (dired-mode . (lambda () (all-the-icons-dired-mode t))))
+
+(use-package olivetti
+  :after org
+  :config
+  (setq olivetti-style 'fancy)
+  (setq-default olivetti-body-width 100))
+
+(defun olivetti-hook ()
+    "Hook to run in org mode"
+    (olivetti-mode)
+    (auto-fill-mode 0)
+    (variable-pitch-mode 1)
+    (visual-line-mode 1))
+
+(add-hook 'org-mode-hook 'olivetti-mode)
 
 (provide 'zolder-org)

@@ -13,7 +13,7 @@
 
 (use-package doom-themes
   :config
-  (setq doom-themes-enable-bold nil)
-  (setq doom-themes-enable-italic nil))
+  (setq doom-themes-enable-bold t)
+  (setq doom-themes-enable-italic t))
 
 (provide 'zolder-themes)
