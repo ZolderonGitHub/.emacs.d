@@ -15,8 +15,8 @@
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
 ;; Backups
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups/")))
 (setq make-backup-files nil)
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups/")))
 
 ;; Default directory
 (setq default-directory "~/")

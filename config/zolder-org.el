@@ -17,22 +17,22 @@
   )
 
 ;; Spell checking
-(when (eq system-type 'windows-nt)
-  (use-package ispell
-    :after org
-    :no-require t
-    :custom
-    (ispell-program "D:/hunspell/bin/hunspell.exe")
-    (ispell-local-dictionnary "en_US")
-    (ispell-silently-savep t)
-    )
-  ;; Doc view
-  (use-package doc-view
-    :after org
-    :custom
-    (doc-view-dvipdfm-program "mutool.exe")
-    )
-  )
+;; (when (eq system-type 'windows-nt)
+;;   (use-package ispell
+;;     :after org
+;;     :no-require t
+;;     :custom
+;;     (ispell-program "D:/hunspell/bin/hunspell.exe")
+;;     (ispell-local-dictionnary "en_US")
+;;     (ispell-silently-savep t)
+;;     )
+;;   ;; Doc view
+;;   (use-package doc-view
+;;     :after org
+;;     :custom
+;;     (doc-view-dvipdfm-program "mutool.exe")
+;;     )
+;;   )
 
 (use-package auctex
   :after org
@@ -67,5 +67,13 @@
     (visual-line-mode 1))
 
 (add-hook 'org-mode-hook 'olivetti-mode)
+
+(use-package elfeed
+  :defer t
+  :config
+  (setq elfeed-feeds '(
+                       ("https://www.mediapart.fr/articles/feed" mediapart journal news)
+                       ("https://www.theguardian.com/europe/rss" guardian journal news)
+                       )))
 
 (provide 'zolder-org)

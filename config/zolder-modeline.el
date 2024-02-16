@@ -33,18 +33,19 @@
 ;; 		modeline-major-mode
 ;; 		))
 
-
-;; (setq-default header-line-format mode-line-format)
-;; (setq-default mode-line-format nil)
-
 ;; Don't forget to install the font-icons
+
 (use-package doom-modeline
   :straight t
   :init (doom-modeline-mode 1)
   :config
   (setq doom-modeline-height 25)
   (setq doom-modeline-hud nil)
+  (setq doom-modeline-buffer-encoding nil)
   )
+
+(setq-default header-line-format mode-line-format)
+(setq-default mode-line-format nil)
 
 (provide 'zolder-modeline)
 

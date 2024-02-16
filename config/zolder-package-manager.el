@@ -35,4 +35,8 @@
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
 
+;; debug info
+;; (setq use-package-verbose t)
+(setq use-package-minimum-reported-time 0.01)
+
 (provide 'zolder-package-manager)
