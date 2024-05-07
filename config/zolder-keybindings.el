@@ -35,6 +35,9 @@
     "b p" '(previous-buffer :wk "Previous buffer")
     "b r" '(revert-buffer :wk "Reload buffer")
 
+    "p" '(consult-buffer :wk "Switch buffer/file")
+    "r" '(consult-ripgrep :wk "Search in project")
+
     ;; Search related
     ":" '(query-replace :wk "Search and Substitute")
 
@@ -63,7 +66,7 @@
     "x r" '(eval-region :wk "Evaluate elisp in region")
 
     ;; Projectiel related
-    "p" '(projectile-command-map :wk "Projectile")
+    "y" '(projectile-command-map :wk "Projectile")
     ))
 
 (provide 'zolder-keybindings)

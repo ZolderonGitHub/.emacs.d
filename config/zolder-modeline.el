@@ -44,8 +44,5 @@
   (setq doom-modeline-buffer-encoding nil)
   )
 
-(setq-default header-line-format mode-line-format)
-(setq-default mode-line-format nil)
-
 (provide 'zolder-modeline)
 

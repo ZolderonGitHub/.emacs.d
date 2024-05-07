@@ -74,6 +74,7 @@
   (setq elfeed-feeds '(
                        ("https://www.mediapart.fr/articles/feed" mediapart journal news)
                        ("https://www.theguardian.com/europe/rss" guardian journal news)
+                       ("https://reporterre.net/spip.php?page=backend-simple" reporterre journal news)
                        )))
 
 (provide 'zolder-org)

@@ -1,9 +1,3 @@
-;; Memory
-;; (defvar last-file-name-handler-alist file-name-handler-alist)
-;; (setq gc-cons-threshold 402653184
-;;       gc-cons-percentage 0.6
-;;       file-name-handler-alist nil)
-
 ;; Startup
 (add-hook 'emacs-startup-hook
 	  #'(lambda()
@@ -120,7 +114,7 @@
 ;; Language support
 (require 'odin-mode)
 
-(load-theme 'doom-nord)
+(load-theme 'doom-gruvbox)
 
 ;; Frames
 (modify-all-frames-parameters
@@ -132,8 +126,3 @@
   (face-spec-reset-face face)
   (set-face-foreground face (face-attribute 'default :background)))
 (set-face-background 'fringe (face-attribute 'default :background))
-
-;; Memory
-;; (setq gc-cons-threshold 16777216
-;;       gc-cons-percentage 0.1
-;;       file-name-handler-alist last-file-name-handler-alist)
